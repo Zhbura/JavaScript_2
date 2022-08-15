@@ -90,3 +90,26 @@ header button:hover {
     color: white;
     background: #F26376;
 }
+
+.basket {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.basket__elem {
+    display: flex;
+    border: 1px solid #FF6A6A;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.basket__elem_right {
+    margin-left: 20px;
+}
+
+.product-single-price {
+    color: #F26376;
+    font-weight: 900;
+}
