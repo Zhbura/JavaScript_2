@@ -61,6 +61,7 @@ class Basket {
     constructor(container = '.basket') {
         this.container = container;
         this.goods = [];
+        this._clickOpenBasket();
         this._getElemsBasket(container)
             .then(data => {
                 this.goods = data.contents;
@@ -74,6 +75,12 @@ class Basket {
             .catch(error => {
                 console.log(error);
             });
+    }
+
+    _clickOpenBasket() {
+        document.querySelector('button').addEventListener('click', () => {
+            document.querySelector(this.container).classList.toggle('hidden');
+        });
     }
 
     render() {
@@ -90,12 +97,12 @@ class BasketItem {
     render(product) {
         return `<div class="basket__elem" data-id="${product.id_product}">
         <div class="basket__elem_left">
-        <img src="${product.img}">
-        <p class="product-title">${product.product_name}</p>
+        <img src=image/laptop.jpg src="mini photo product"> 
+        <p>${product.product_name}</p>
         </div>
         <div class="basket__elem_right">
-        <p class="product-quantity">Quantity: ${product.quantity}</p>
-    <p class="product-single-price">$${product.price}</p>
+        <p>Quantity: ${product.quantity}</p>
+    <p class="basket__elem_price">$${product.price}</p>
     </div>
     </div>`
     }

@@ -16,9 +16,10 @@ header {
     box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
+    position: relative;
 }
 
-header button {
+.button__basket {
     width: 120px;
     border: 3px solid #FF6A6A;
     background: none;
@@ -28,7 +29,7 @@ header button {
     cursor: pointer;
 }
 
-header button:hover {
+.button__basket:hover {
     color: white;
     background: #F26376;
 }
@@ -50,8 +51,6 @@ header button:hover {
 
 .product-item img {
     display: block;
-    width: 250px;
-    height: 250px;
     align-self: center;
 }
 
@@ -91,25 +90,47 @@ header button:hover {
     background: #F26376;
 }
 
+.hidden {
+    display: none;
+}
+
 .basket {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    position: absolute;
+    margin-top: 50px;
 }
 
 .basket__elem {
     display: flex;
-    border: 1px solid #FF6A6A;
+    justify-content: space-between;
+    border: 3px solid #FF6A6A;
     border-radius: 20px;
-    margin: 20px;
+    margin: 5px;
     padding: 10px;
+    max-width: 360px;
+}
+
+.basket__elem_left {
+    display: flex;
+    align-items: center;
+}
+
+.basket__elem_left p {
+    margin-left: 30px;
 }
 
 .basket__elem_right {
     margin-left: 20px;
+    align-self: center;
 }
 
-.product-single-price {
+.basket__elem_price {
     color: #F26376;
     font-weight: 900;
+    margin-top: 20px;
+}
+
+.basket__elem img {
+    display: block;
+    width: 100px;
+    height: 100px;
 }
