@@ -25,12 +25,16 @@
         One: 'That's great. Well, you better get going. You don't want to be late.'
         Two: 'I'll see you next time.'
         One: 'Sure. Bye.' </p>
+
+    <button>Менять</button>
     <script>
         "use strict";
 
-        const str = document.querySelector('p').innerText;
-        const regexp = /\B'|'\B/g;
-        console.log(str.replace(regexp, '"'));
+        document.querySelector('button').addEventListener('click', () => {
+            const str = document.querySelector('p');
+            const regexp = /\B'|'\B/g;
+            str.innerText = str.innerText.replace(regexp, '\"');
+        });
     </script>
 </body>
 
