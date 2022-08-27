@@ -1,0 +1,34 @@
+{
+    "amount": 0,
+    "countGoods": 0,
+    "contents": [
+        {
+            "quantity": 1,
+            "id_product": 456,
+            "product_name": "Нетбук",
+            "price": 15000,
+            "img": "./img/netbook.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 457,
+            "product_name": "Мышка",
+            "price": 2000,
+            "img": "./img/mouse.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 123,
+            "product_name": "Клавиатура",
+            "price": 3000,
+            "img": "./img/keyboard.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 124,
+            "product_name": "Ноутбук",
+            "price": 16000,
+            "img": "./img/laptop.jpg"
+        }
+    ]
+}
