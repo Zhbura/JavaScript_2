@@ -1,0 +1,54 @@
+.header {
+    background: #222222;
+    padding: 18px 32px;
+    height: 75px;
+    box-sizing: border-box;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__section-left {
+        display: flex;
+    }
+
+    &__section-right {
+        display: flex;
+    }
+
+    &__search {
+        margin-left: 41px;
+
+        img {
+            position: absolute;
+            margin-top: 5px;
+        }
+
+        input {
+            position: relative;
+            box-sizing: border-box;
+            width: 150px;
+            padding: 10px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            color: white;
+        }
+    }
+
+    &__user {
+        padding-left: 25px;
+        padding-right: 27px;
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            display: none;
+        }
+    }
+}

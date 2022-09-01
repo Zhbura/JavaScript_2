@@ -1,11 +1,17 @@
 Vue.component('header-comp', {
     props: ['cartitems', 'addproduct'],
-    template: ` <div class="head">
-                    <div class="head_content">
-                        <search></search>
-                        <cart :cartitems = 'cartitems' :addproduct='addproduct'></cart>
-                    </div>
-                </div>
+    template: ` <div class="container">
+    <div class="header__section-left">
+        <img src="../img/logo.svg" alt="logo">
+        <search></search>
+    </div>
+    <div class="header__section-right">
+        <a href="#"><img class="header__menu" src="../img/menu.svg" alt="menu"></a>
+        <a href="registration.html"><img src="../img/user.svg" alt="user"
+                class="header__user"></a>
+                <cart :cartitems = 'cartitems' :addproduct='addproduct'></cart>
+    </div>
+</div>
 `
 })
 
@@ -16,9 +22,10 @@ Vue.component('search', {
         }
     },
     template: `
-    <div class="find_content">
+    <div class="header__search">
         <input type="text" v-model='searchLine'  @input='$parent.$emit("filtergoods", searchLine)' placeholder='Найти товар...'>
-    </div>
+        <img src="../img/search.svg" alt="search">
+        </div>
     `
 })
 
@@ -46,7 +53,7 @@ Vue.component('cart', {
     },
     template: `
     <div class="cart_content">
-        <button class="btn-cart" type="button" @click='isVisibleCart = !isVisibleCart'>Корзина</button>
+    <img src="../img/cart.svg" alt="shopping cart" @click='isVisibleCart = !isVisibleCart' class="header__cart">
         <div class="cart" v-if='isVisibleCart'>
             <p v-if='!cartitems[1].length'>Пусто</p>
             <div class='cart_item' v-for="item of cartitems[1]" :key='item.id_product'>
@@ -54,11 +61,11 @@ Vue.component('cart', {
                 <div class='cart_item_info'>
                     <p class='cart_item_name'>{{item.product_name}}</p>
                     <p type='number' class='cart_item_count' @input='$parent.$emit("addproduct",item)'>Количество: {{ item.quantity }}</p>
-                    <p class='cart_item_price'>Стоимость: {{item.quantity * item.price}}</p>
+                    <p class='cart_item_price'>Стоимость: {{item.quantity * item.price}} $</p>
                 </div>
                 <button @click='deleteItem(item.id_product)'>Удалить</button>
             </div>
-            <p v-if='cartitems[1].length'>Итого: {{calculateCart()}}</p>
+            <p v-if='cartitems[1].length'>Итого: {{calculateCart()}} $</p>
         </div>
     </div>
     `

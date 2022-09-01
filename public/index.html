@@ -3,22 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>eShop</title>
+    <title>Shop_Layout</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/5f33418769.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="app">
-        <header>
+        <div class="header">
             <header-comp :cartitems="cartGoods" @filtergoods='filterGoods' @addproduct='addProduct'></header-comp>
-        </header>
+        </div>
+        <div class="brandwrap">
+            <brandwrap-comp></brandwrap-comp>
+        </div>
+        <div class="offerTop">
+            <offer-comp></offer-comp>
+        </div>
         <main>
             <products-comp :showed='showedProducts' @addproduct='addProduct' @remove='remove'></products-comp>
         </main>
+        <div class="servises">
+            <servises-comp></servises-comp>
+        </div>
+        <div class="subscribe">
+            <subscribe-comp></subscribe-comp>
+        </div>
+        <div class="footer">
+            <footer-comp></footer-comp>
+        </div>
     </div>
     <script src="./js/vue.js"></script>
     <script src="./js/header.js"></script>
+    <script src="./js/brandWrap.js"></script>
+    <script src="./js/offer.js"></script>
     <script src="./js/products.js"></script>
+    <script src="./js/servises.js"></script>
+    <script src="./js/subscribe.js"></script>
+    <script src="./js/footer.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

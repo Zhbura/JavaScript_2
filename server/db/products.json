@@ -1,26 +1,38 @@
 [
   {
-    "id_product": 124,
-    "product_name": "Ноутбук",
-    "price": 16000,
-    "img": "./img/laptop.jpg"
+    "id_product": 1,
+    "product_name": "BACKPACKS",
+    "price": 52,
+    "img": "./img/catalog_img_1.png"
   },
   {
-    "id_product": 457,
-    "product_name": "Мышка",
-    "price": 2000,
-    "img": "./img/mouse.jpg"
+    "id_product": 2,
+    "product_name": "JEANS",
+    "price": 99,
+    "img": "./img/catalog_img_2.png"
   },
   {
-    "id_product": 123,
-    "product_name": "Клавиатура",
-    "price": 3000,
-    "img": "./img/keyboard.jpg"
+    "id_product": 3,
+    "product_name": "MEN'S HOODIES",
+    "price": 62,
+    "img": "./img/catalog_img_3.png"
   },
   {
-    "id_product": 456,
-    "product_name": "Нетбук",
-    "price": 15000,
-    "img": "./img/netbook.jpg"
+    "id_product": 4,
+    "product_name": "TROUSERS",
+    "price": 12,
+    "img": "./img/catalog_img_4.png"
+  },
+  {
+    "id_product": 5,
+    "product_name": "SWEATSHIRTS",
+    "price": 43,
+    "img": "./img/catalog_img_5.png"
+  },
+  {
+    "id_product": 6,
+    "product_name": "SHIRTS",
+    "price": 34,
+    "img": "./img/catalog_img_6.png"
   }
 ]

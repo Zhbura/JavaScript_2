@@ -1,0 +1,50 @@
+.footer {
+    background: #222224;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 230px 24px 150px;
+
+        @media (min-width: 768px) and (max-width: 1140px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            flex-direction: column-reverse;
+            padding: 43px 0 10px 0;
+            align-items: center;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 19px;
+            color: #FBFBFB;
+        }
+
+        a {
+            color: #000;
+            background: #FFFFFF;
+            width: 32px;
+            height: 32px;
+            padding: 8px;
+            text-decoration: none;
+
+            &:hover {
+                color: #FFFFFF;
+                background: #F16D7F;
+            }
+
+            &:not(:last-child) {
+                margin-right: 7px;
+            }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        div {
+            padding-bottom: 40px;
+        }
+    }
+}
